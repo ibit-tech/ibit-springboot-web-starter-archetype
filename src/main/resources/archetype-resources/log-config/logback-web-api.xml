@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="1000">
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>[%d] [%p] [%F:%L] - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+    </appender>
+
+    <appender name="LogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOGGING_PATH}/api_adminCommon_web.log</File>
+        <Append>true</Append>
+        <encoder>
+            <pattern>[%d] [%p] [%F:%L] - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGGING_PATH}/api_adminCommon_web.%d{yyyy-MM-dd}.gz</fileNamePattern>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="LogAccessFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOGGING_PATH}/api_admin_web.log</File>
+        <Append>true</Append>
+        <encoder>
+            <pattern>%m%n</pattern>
+        </encoder>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%m%n</pattern>
+        </layout>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGGING_PATH}/api_admin_web.log.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>400</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!--web access log-->
+    <logger name="${package}.core.common.logLogMonitor" level="INFO" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="LogAccessFile"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="LogFile"/>
+    </root>
+
+</configuration>
