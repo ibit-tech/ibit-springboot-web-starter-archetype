@@ -16,6 +16,8 @@
         <ibit.common-lang.version>1.0</ibit.common-lang.version>
         <jackson.version>2.10.1</jackson.version>
         <junit.version>4.12</junit.version>
+        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
+        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
     </properties>
 
     <dependencies>
@@ -47,5 +49,17 @@
             <version>${jackson.version}</version>
         </dependency>
 
+        <!--  swagger  -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger-ui.version}</version>
+        </dependency>
     </dependencies>
 </project>
