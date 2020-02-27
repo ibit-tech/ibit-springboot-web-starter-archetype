@@ -78,7 +78,7 @@ $ mvn install
 |-- src 
     |-- main
          |-- java java代码
-              |-- xxx.xxx.api 
+              |-- tech.ibit.demo.api 
                     |-- config 配置（如session，cookie等）
                     |-- interceptor 拦截器
                     |-- module Controller模块
@@ -97,7 +97,7 @@ $ mvn install
 
 #### 使用注解`@CustomResponse`，不使用则直接返回对象
 
-假设Controller方法返回参数为data，则自动包装为:
+假设Controller方法返回参数为data，则自动包装为（tech.ibit.web.springboot.response.Response对象）:
 
 ```
 {
@@ -163,6 +163,71 @@ eg：登录
 }
 ```
 
+#### 使用tech.ibit.web.springboot.response.Response自定义构造完整返回对象
+
+```
+    /**
+     * 获取实例
+     *
+     * @param code      编码
+     * @param message   消息
+     * @param data      数据
+     * @param throwable 异常
+     * @param <T>       data数据类型
+     * @return 实例
+     */
+    public static <T> Response getInstance(int code, String message, T data, Throwable throwable) {
+        return new Response<>(code, message, data, throwable);
+    }
+
+
+    /**
+     * 获取实例
+     *
+     * @return 实例
+     */
+    public static Response getInstance() {
+        return new Response<>();
+    }
+
+    /**
+     * 获取实例
+     *
+     * @param data 数据
+     * @param <T>  data数据类型
+     * @return 实例
+     */
+    public static <T> Response<T> getInstance(T data) {
+        return new Response<>(data);
+    }
+
+
+    /**
+     * 获取实例
+     *
+     * @param code    编码
+     * @param message 消息
+     * @param data    数据
+     * @param <T>     data数据类型
+     * @return 实例
+     */
+    public static <T> Response<T> getInstance(int code, String message, T data) {
+        return new Response<>(code, message, data);
+    }
+
+
+    /**
+     * 获取实例
+     *
+     * @param code    编码
+     * @param message 消息
+     * @param <T>     data数据类型
+     * @return 实例
+     */
+    public static <T> Response<T> getInstance(int code, String message) {
+        return new Response<>(code, message);
+    }
+```
 
 ### 异常说明
 
@@ -208,3 +273,24 @@ eg：登录
 ```
 
 ps： 错误码定义参考`core`中定义的公共异常
+
+
+### 其他说明
+
+#### 接口文档，使用swagger2，只会在本地、测试、开发环境启动
+
+```
+@Configuration
+@EnableSwagger2
+@Profile({EnvConstant.ENV_DEV, EnvConstant.ENV_TEST, EnvConstant.ENV_LOCAL})
+public class SwaggerConfig implements WebMvcConfigurer {
+     // 省略配置
+}
+```
+
+### 用法参考
+
+* [ibit-mybatis](https://github.com/ibit-tech/ibit-mybatis)
+* [sql-builder](https://github.com/ibit-tech/sql-builder)
+* [structlog4j](https://github.com/ibit-tech/structlog4j)
+* [ibit-mybatis-generator](https://github.com/ibit-tech/ibit-mybatis-generator)
