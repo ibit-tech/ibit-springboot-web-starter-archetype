@@ -71,6 +71,16 @@ public class WebConfig implements WebMvcConfigurer {
     }
 
     /**
+     * 拦截springboot-ui的文档请求
+     * @param registry
+     */
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
+    }
+
+    /**
      * 序列化
      */
     private MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
