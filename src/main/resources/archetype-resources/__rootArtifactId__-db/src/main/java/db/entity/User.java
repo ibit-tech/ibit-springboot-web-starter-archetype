@@ -28,7 +28,7 @@ public class User {
      * 用户名称，登录用的，英文
      * VARCHAR(32)
      */
-    @DbColumn(name = "username")
+    @DbColumn(name = "user_name")
     private String username;
 
     /**
@@ -42,7 +42,7 @@ public class User {
      * 昵称
      * VARCHAR(32)
      */
-    @DbColumn(name = "nickName")
+    @DbColumn(name = "nick_name")
     private String nickname;
 
     /**
