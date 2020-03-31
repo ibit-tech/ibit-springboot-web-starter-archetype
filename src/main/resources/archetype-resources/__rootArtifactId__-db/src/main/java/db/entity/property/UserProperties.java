@@ -23,7 +23,7 @@ public interface UserProperties {
     /**
      * 用户名称，登录用的，英文
      */
-    Column username = new Column(TABLE, "username");
+    Column username = new Column(TABLE, "user_name");
 
     /**
      * 登录密码
@@ -33,7 +33,7 @@ public interface UserProperties {
     /**
      * 昵称
      */
-    Column nickname = new Column(TABLE, "nickName");
+    Column nickname = new Column(TABLE, "nick_name");
 
     /**
      * 性别，0：未知，1：男，2：女
