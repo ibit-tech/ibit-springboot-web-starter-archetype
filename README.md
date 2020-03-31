@@ -4,7 +4,7 @@
 
 $ mvn -X archetype:generate                                  \
     -DarchetypeArtifactId=ibit-springboot-web-starter-archetype        \
-    -DarchetypeVersion=1.2 \
+    -DarchetypeVersion=1.3 \
     -DarchetypeGroupId=tech.ibit \
     -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots
 $ mvn install
@@ -287,6 +287,18 @@ public class SwaggerConfig implements WebMvcConfigurer {
      // 省略配置
 }
 ```
+
+说明：
+
+```
+ibit-springboot-web-starter-archetype版本低于1.3:
+文档地址：http://127.0.0.1:8080/swagger-ui.html
+
+ibit-springboot-web-starter-archetype 1.3+（包含1.3）:
+文档地址：http://127.0.0.1:8080/doc.html
+```
+
+
 
 ### 用法参考
 
