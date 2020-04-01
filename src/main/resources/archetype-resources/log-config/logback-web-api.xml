@@ -45,7 +45,7 @@
     </appender>
 
     <!--web access log-->
-    <logger name="${package}.core.common.logLogMonitor" level="INFO" additivity="false">
+    <logger name="${package}.core.common.log.LogMonitor" level="INFO" additivity="false">
         <appender-ref ref="Console"/>
         <appender-ref ref="LogAccessFile"/>
     </logger>
