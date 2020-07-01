@@ -18,7 +18,7 @@ import ${package}.core.common.config.IntegerCommonEnumConverterFactory;
 import ${package}.core.common.config.StringCommonEnumConverterFactory;
 import ${package}.core.common.serialize.CommonEnumSerializer;
 import ${package}.core.module.session.service.SessionService;
-import tech.ibit.mybatis.type.CommonEnum;
+import tech.ibit.mybatis.CommonEnum;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;

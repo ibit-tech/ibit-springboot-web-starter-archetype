@@ -3,7 +3,7 @@ package ${package}.core.common.serialize;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
-import tech.ibit.mybatis.type.CommonEnum;
+import tech.ibit.mybatis.CommonEnum;
 
 import java.io.IOException;
 

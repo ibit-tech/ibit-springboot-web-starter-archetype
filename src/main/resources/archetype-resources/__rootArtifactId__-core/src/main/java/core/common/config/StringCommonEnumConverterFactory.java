@@ -3,7 +3,7 @@ package ${package}.core.common.config;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
 import org.springframework.stereotype.Component;
-import tech.ibit.mybatis.type.CommonEnum;
+import tech.ibit.mybatis.CommonEnum;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

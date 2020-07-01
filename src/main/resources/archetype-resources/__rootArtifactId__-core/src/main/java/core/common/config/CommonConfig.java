@@ -1,12 +1,11 @@
 package ${package}.core.common.config;
 
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import ${package}.core.common.env.EnvConfig;
-import tech.ibit.mybatis.SqlBuilder;
+import tech.ibit.mybatis.SqlProvider;
 import tech.ibit.structlog4j.StructLog4J;
 
 import javax.annotation.PostConstruct;
@@ -47,13 +46,8 @@ public class CommonConfig {
         // 增加公共字段
         StructLog4J.setGlobalConfig(() -> new Object[]{"env", activeProfile, "service", appName});
         StructLog4J.setTransStackTrace(envConfig.isTransStackTrace());
-        SqlBuilder.setValueFormatter(new LinkedHashMap<Class, Function<Object, Object>>() {{
-            put(tech.ibit.mybatis.type.CommonEnum.class, o -> ((tech.ibit.mybatis.type.CommonEnum) o).getValue());
+        SqlProvider.setValueFormatter(new LinkedHashMap<Class, Function<Object, Object>>() {{
+            put(tech.ibit.mybatis.CommonEnum.class, o -> ((tech.ibit.mybatis.CommonEnum) o).getValue());
         }});
-    }
-
-    @Bean
-    public ModelMapper modelMapper() {
-        return new ModelMapper();
     }
 }

@@ -2,7 +2,7 @@ package ${package}.core.common.config;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
-import tech.ibit.mybatis.type.CommonEnum;
+import tech.ibit.mybatis.CommonEnum;
 
 import java.util.HashMap;
 import java.util.Map;

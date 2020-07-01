@@ -40,7 +40,7 @@ $ mvn install
                     |-- entity 实体对象（Gen生成）
                            |-- po 自定义PO（字段是对应entity子集，需要包含主键）
                            |-- property 数据库表对象（Gen生成）
-                           |-- type entity中定义的枚举类，需要实现接口`tech.ibit.mybatis.type.CommonEnum`
+                           |-- type entity中定义的枚举类，需要实现接口`tech.ibit.mybatis.CommonEnum`
                     |-- mapper mapper对象（Gen生成）
          |-- resources 资源目录                        
               |-- tech/ibit/demo/db/mapper mapper对应的xml文件，（Gen生成）  

@@ -2,7 +2,10 @@ package ${package}.core.module.user.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.beans.BeanUtils;
 import ${package}.core.module.enterprise.dto.EnterpriseDto;
+import ${package}.db.entity.User;
 import ${package}.db.entity.type.UserGender;
 
 /**
@@ -61,4 +64,9 @@ public class UserLoginDto {
      */
     @ApiModelProperty("企业信息")
     private EnterpriseDto enterprise;
+
+    public UserLoginDto(User user, EnterpriseDto enterprise) {
+        BeanUtils.copyProperties(user, this);
+        this.enterprise = enterprise;
+    }
 }

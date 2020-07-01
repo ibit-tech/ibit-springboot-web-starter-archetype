@@ -7,11 +7,6 @@ import ${package}.core.dao.UserDao;
 import ${package}.db.entity.User;
 import ${package}.db.entity.property.UserProperties;
 import ${package}.db.mapper.UserMapper;
-import tech.ibit.mybatis.MapperDaoUtils;
-import tech.ibit.mybatis.template.dao.impl.SingleIdDaoImpl;
-import tech.ibit.mybatis.template.mapper.Mapper;
-import tech.ibit.sqlbuilder.CriteriaItemMaker;
-import tech.ibit.sqlbuilder.Sql;
 
 /**
  * Dao for user
@@ -19,21 +14,10 @@ import tech.ibit.sqlbuilder.Sql;
  * @author IBIT TECH
  */
 @Repository
-public class UserDaoImpl extends SingleIdDaoImpl<User, Integer> implements UserDao {
+public class UserDaoImpl implements UserDao {
 
     @Autowired
     private UserMapper mapper;
-
-    @Override
-    public Mapper<User> getMapper() {
-        return mapper;
-    }
-
-    @Override
-    public Class<User> getPoClazz() {
-        return User.class;
-    }
-
 
     /**
      * 通过用户名查询用户
@@ -46,11 +30,13 @@ public class UserDaoImpl extends SingleIdDaoImpl<User, Integer> implements UserD
         if (StringUtils.isBlank(username)) {
             return null;
         }
-        Sql sql = new Sql()
-                .selectPo(getPoClazz()).from(UserProperties.TABLE)
-                .andWhere(CriteriaItemMaker.equalsTo(UserProperties.username, username))
-                .limit(1);
-        return MapperDaoUtils.executeQueryOne(mapper, sql.getSqlParams());
+        return mapper
+                .createQuery()
+                .columnPo(User.class)
+                .from(UserProperties.TABLE)
+                .andWhere(UserProperties.username.eq(username))
+                .limit(1)
+                .executeQueryOne();
     }
 
 }
