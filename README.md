@@ -4,9 +4,8 @@
 
 $ mvn -X archetype:generate                                  \
     -DarchetypeArtifactId=ibit-springboot-web-starter-archetype        \
-    -DarchetypeVersion=1.3 \
-    -DarchetypeGroupId=tech.ibit \
-    -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots
+    -DarchetypeVersion=2.0 \
+    -DarchetypeGroupId=tech.ibit
 $ mvn install
 ```
 
@@ -19,10 +18,10 @@ $ mvn install
 | 模块名称| 说明 |
 | --- | --- |
 | demo-db | db基础模块（entity、mapper等) |
-| demo-core | 核心业务代码（dao、service等） |
+| demo-core | 核心业务代码（service等） |
 | demo-api | Controller、拦截器等 |  
 | log-config | logback相关配置，不直接写到api中，用来动态修改日志 |
-| demo-code-generator | 代码生成器（entity、mapper、dao生成）|
+| demo-code-generator | 代码生成器（entity、mapper生成）|
 
 ### 代码结构说明
 
@@ -58,8 +57,7 @@ $ mvn install
                            |-- config 配置
                            |-- env 环境
                            |-- log 日志
-                           |-- ...
-                    |-- dao 构造层   
+                           |-- ...  
                     |-- exception 定义公共异常（系统错误码、错误码前缀等）
                     |-- module 业务层分模块
                            |-- enterprise 以企业为例子，企业模块
@@ -290,19 +288,11 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
 说明：
 
-```
-ibit-springboot-web-starter-archetype版本低于1.3:
-文档地址：http://127.0.0.1:8080/swagger-ui.html
-
-ibit-springboot-web-starter-archetype 1.3+（包含1.3）:
 文档地址：http://127.0.0.1:8080/doc.html
-```
 
 
-
-### 用法参考
+### 相关项目
 
 * [ibit-mybatis](https://github.com/ibit-tech/ibit-mybatis)
-* [sql-builder](https://github.com/ibit-tech/sql-builder)
 * [structlog4j](https://github.com/ibit-tech/structlog4j)
 * [ibit-mybatis-generator](https://github.com/ibit-tech/ibit-mybatis-generator)

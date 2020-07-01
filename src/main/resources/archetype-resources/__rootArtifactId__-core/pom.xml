@@ -19,7 +19,7 @@
         <hibernate-validator.version>5.3.6.Final</hibernate-validator.version>
         <commons-codec.version>1.10</commons-codec.version>
         <modelmapper.version>2.3.3</modelmapper.version>
-        <ibit-springboot-web-starter.version>2.0-SNAPSHOT</ibit-springboot-web-starter.version>
+        <ibit-springboot-web-starter.version>2.0</ibit-springboot-web-starter.version>
         <db.version>${version}</db.version>
     </properties>
 

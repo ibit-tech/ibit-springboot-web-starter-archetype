@@ -32,11 +32,6 @@ public class CodeGenerator {
         String basePackage = "${package}.db";
         generator.setDefaultProject(new ProjectInfo(projectDir, basePackage));
 
-        String daoProjectDir = "/xx/core";
-        String daoBasePackage = "${package}.core";
-        generator.setDaoProject(new ProjectInfo(daoProjectDir, daoBasePackage));
-
-
         // 指定作者
         generator.setAuthor("IBIT TECH");
 

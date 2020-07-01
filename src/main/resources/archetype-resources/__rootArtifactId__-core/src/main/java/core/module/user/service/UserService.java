@@ -1,6 +1,6 @@
 package ${package}.core.module.user.service;
 
-import ${package}.demo.db.entity.User;
+import ${package}.db.entity.User;
 
 /**
  * 用户service
