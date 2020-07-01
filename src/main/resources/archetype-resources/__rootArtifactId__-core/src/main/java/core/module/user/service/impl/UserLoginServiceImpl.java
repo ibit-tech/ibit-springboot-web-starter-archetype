@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tech.ibit.common.crypto.Md5Utils;
-import ${package}.core.dao.UserDao;
 import ${package}.core.exception.UserErrorCode;
 import ${package}.core.module.enterprise.dto.EnterpriseDto;
 import ${package}.core.module.enterprise.service.EnterpriseService;
@@ -13,6 +12,7 @@ import ${package}.core.module.session.service.SessionService;
 import ${package}.core.module.user.dto.UserLoginDto;
 import ${package}.core.module.user.param.LoginParam;
 import ${package}.core.module.user.service.UserLoginService;
+import ${package}.core.module.user.service.UserService;
 import ${package}.db.entity.User;
 import ${package}.db.mapper.UserMapper;
 import tech.ibit.web.springboot.exception.ApiException;
@@ -34,7 +34,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     private UserMapper userMapper;
 
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
     @Autowired
     private SessionService sessionService;
@@ -51,7 +51,7 @@ public class UserLoginServiceImpl implements UserLoginService {
     @Override
     public UserLoginDto login(HttpServletRequest request, LoginParam loginParam) {
 
-        User user = userDao.getByUsername(loginParam.getUsername());
+        User user = userService.getByUsername(loginParam.getUsername());
         if (null == user) {
             throw new ApiException(UserErrorCode.UserNameOrPwdError.MESSAGE);
         }
