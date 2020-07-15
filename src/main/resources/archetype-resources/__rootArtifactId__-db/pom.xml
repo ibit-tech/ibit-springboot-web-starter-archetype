@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <ibit-mybatis.version>2.0</ibit-mybatis.version>
+        <ibit-mybatis.version>2.1</ibit-mybatis.version>
     </properties>
 
     <dependencies>
@@ -36,6 +36,17 @@
     <build>
         <finalName>${artifactId}</finalName>
         <plugins>
+
+            <!--代码生成-->
+            <plugin>
+                <artifactId>ibit-mybatis-generator-maven-plugin</artifactId>
+                <groupId>tech.ibit</groupId>
+                <version>1.0</version>
+                <configuration>
+                    <configFile>src/main/resources/generate.properties</configFile>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>

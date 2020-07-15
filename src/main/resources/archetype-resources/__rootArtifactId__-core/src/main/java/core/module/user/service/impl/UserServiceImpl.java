@@ -33,9 +33,9 @@ public class UserServiceImpl implements UserService {
         }
         return mapper
                 .createQuery()
-                .columnPo(User.class)
-                .from(UserProperties.TABLE)
-                .andWhere(UserProperties.username.eq(username))
+                .columnDefaultPo()
+                .fromDefault()
+                .andWhere(UserProperties.userName.eq(username))
                 .limit(1)
                 .executeQueryOne();
     }

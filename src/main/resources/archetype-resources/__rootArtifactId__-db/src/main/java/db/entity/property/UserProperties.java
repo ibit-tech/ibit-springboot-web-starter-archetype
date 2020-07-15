@@ -6,34 +6,34 @@ import tech.ibit.mybatis.sqlbuilder.Table;
 /**
  * Property for user
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface UserProperties {
 
     /**
-     * 用户
+     * user
      */
     Table TABLE = new Table("user", "u");
 
     /**
-     * 用户ID，自增长
+     * 用户id
      */
     Column userId = new Column(TABLE, "user_id");
 
     /**
-     * 用户名称，登录用的，英文
+     * 用户名，登陆用的，英文
      */
-    Column username = new Column(TABLE, "user_name");
+    Column userName = new Column(TABLE, "user_name");
 
     /**
-     * 登录密码
+     * password
      */
     Column password = new Column(TABLE, "password");
 
     /**
-     * 昵称
+     * 用户昵称
      */
-    Column nickname = new Column(TABLE, "nick_name");
+    Column nickName = new Column(TABLE, "nick_name");
 
     /**
      * 性别，0：未知，1：男，2：女
@@ -46,7 +46,7 @@ public interface UserProperties {
     Column mobile = new Column(TABLE, "mobile");
 
     /**
-     * 邮箱
+     * 绑定邮箱
      */
     Column email = new Column(TABLE, "email");
 
@@ -56,7 +56,7 @@ public interface UserProperties {
     Column wechat = new Column(TABLE, "wechat");
 
     /**
-     * 所属企业ID
+     * 所属企业id
      */
     Column enterpriseId = new Column(TABLE, "enterprise_id");
 

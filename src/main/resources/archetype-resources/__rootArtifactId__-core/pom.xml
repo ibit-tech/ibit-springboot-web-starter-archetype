@@ -40,6 +40,12 @@
             <groupId>tech.ibit</groupId>
             <artifactId>ibit-springboot-web-starter</artifactId>
             <version>${ibit-springboot-web-starter.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>tech.ibit</groupId>
+                    <artifactId>ibit-mybatis</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- mysql -->

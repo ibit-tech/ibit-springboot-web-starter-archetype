@@ -85,9 +85,8 @@ public class UserController {
     @ApiResponses({
             @ApiResponse(code = 200, message = "S_OK", responseContainer = "data", response = Map.class),
     })
-    public Object logout(HttpServletRequest request) {
+    public void logout(HttpServletRequest request) {
         userLoginService.logout(request);
-        return null;
     }
 
 }

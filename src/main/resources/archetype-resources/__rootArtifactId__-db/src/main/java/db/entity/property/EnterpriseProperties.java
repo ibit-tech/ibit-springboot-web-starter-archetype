@@ -6,17 +6,17 @@ import tech.ibit.mybatis.sqlbuilder.Table;
 /**
  * Property for enterprise
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface EnterpriseProperties {
 
     /**
-     * 企业
+     * enterprise
      */
     Table TABLE = new Table("enterprise", "e");
 
     /**
-     * 企业ID，自增长
+     * 企业id
      */
     Column enterpriseId = new Column(TABLE, "enterprise_id");
 

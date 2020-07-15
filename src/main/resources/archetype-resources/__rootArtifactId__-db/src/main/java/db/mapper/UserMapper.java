@@ -1,12 +1,16 @@
 package ${package}.db.mapper;
 
 import ${package}.db.entity.User;
+import ${package}.db.entity.property.UserProperties;
 import tech.ibit.mybatis.SingleIdMapper;
+import tech.ibit.mybatis.sqlbuilder.Column;
+import tech.ibit.mybatis.sqlbuilder.Table;
+
 
 /**
- * Mapper for user
+ * SingleIdMapper for user
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface UserMapper extends SingleIdMapper<User, Integer> {
 
@@ -20,4 +24,23 @@ public interface UserMapper extends SingleIdMapper<User, Integer> {
         return User.class;
     }
 
+    /**
+     * 获取默认的表对象
+     *
+     * @return 表对象
+     */
+    @Override
+    default Table getDefaultTable() {
+        return UserProperties.TABLE;
+    }
+
+    /**
+     * 获取主键列
+     *
+     * @return 主键列
+     */
+    @Override
+    default Column getId() {
+        return UserProperties.userId;
+    }
 }

@@ -11,43 +11,43 @@ import java.util.Date;
 /**
  * Entity for user
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 @DbTable(name = "user", alias = "u")
 public class User {
 
     /**
-     * 用户ID，自增长
+     * 用户id
      * INT(10, 0)
      */
     @DbId(name = "user_id", autoIncrease = true)
     private Integer userId;
 
     /**
-     * 用户名称，登录用的，英文
+     * 用户名，登陆用的，英文
      * VARCHAR(32)
      */
     @DbColumn(name = "user_name")
-    private String username;
+    private String userName;
 
     /**
-     * 登录密码
-     * VARCHAR(32)
+     * password
+     * VARCHAR(255)
      */
     @DbColumn(name = "password")
     private String password;
 
     /**
-     * 昵称
-     * VARCHAR(32)
+     * 用户昵称
+     * VARCHAR(128)
      */
     @DbColumn(name = "nick_name")
-    private String nickname;
+    private String nickName;
 
     /**
      * 性别，0：未知，1：男，2：女
-     * INT(10, 0)
+     * BIT(0)
      */
     @DbColumn(name = "gender")
     private UserGender gender;
@@ -60,7 +60,7 @@ public class User {
     private String mobile;
 
     /**
-     * 邮箱
+     * 绑定邮箱
      * VARCHAR(190)
      */
     @DbColumn(name = "email", nullable = true)
@@ -74,7 +74,7 @@ public class User {
     private String wechat;
 
     /**
-     * 所属企业ID
+     * 所属企业id
      * INT(10, 0)
      */
     @DbColumn(name = "enterprise_id", nullable = true)
@@ -82,14 +82,14 @@ public class User {
 
     /**
      * 创建时间
-     * TIMESTAMP(19)
+     * DATETIME(19)
      */
     @DbColumn(name = "gmt_create", nullable = true)
     private Date gmtCreate;
 
     /**
      * 修改时间
-     * TIMESTAMP(19)
+     * DATETIME(19)
      */
     @DbColumn(name = "gmt_modified", nullable = true)
     private Date gmtModified;

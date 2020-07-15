@@ -17,7 +17,7 @@ import java.util.Date;
 public class Enterprise {
 
     /**
-     * 企业ID，自增长
+     * 企业id
      * INT(10, 0)
      */
     @DbId(name = "enterprise_id", autoIncrease = true)
@@ -31,15 +31,15 @@ public class Enterprise {
     private String name;
 
     /**
-     * 创建时间
-     * TIMESTAMP(19)
+     * 创建时间/Users/mabinhua/code/github/ibit-tech/deha/log-config/Users/mabinhua/code/github/ibit-tech/deha/log-configsdfsdfdsf
+     * DATETIME(19)
      */
     @DbColumn(name = "gmt_create", nullable = true)
     private Date gmtCreate;
 
     /**
      * 修改时间
-     * TIMESTAMP(19)
+     * DATETIME(19)
      */
     @DbColumn(name = "gmt_modified", nullable = true)
     private Date gmtModified;
