@@ -14,12 +14,12 @@
     <packaging>jar</packaging>
 
     <properties>
-        <mysql-connector-java.version>5.1.44</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
         <aspectj.version>1.8.10</aspectj.version>
         <hibernate-validator.version>5.3.6.Final</hibernate-validator.version>
         <commons-codec.version>1.10</commons-codec.version>
         <modelmapper.version>2.3.3</modelmapper.version>
-        <ibit-springboot-web-starter.version>2.0</ibit-springboot-web-starter.version>
+        <ibit-springboot-web-starter.version>2.1</ibit-springboot-web-starter.version>
         <db.version>${version}</db.version>
     </properties>
 

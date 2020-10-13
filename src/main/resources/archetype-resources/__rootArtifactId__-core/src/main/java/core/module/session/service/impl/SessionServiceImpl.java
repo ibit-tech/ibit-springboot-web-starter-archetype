@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Session Service实现
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Service
 public class SessionServiceImpl implements SessionService {

@@ -11,7 +11,6 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import ${package}.api.interceptor.LoginInterceptor;
 import ${package}.core.common.config.IntegerCommonEnumConverterFactory;
@@ -27,7 +26,7 @@ import java.util.List;
 /**
  * Web配置
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
@@ -69,16 +68,6 @@ public class WebConfig implements WebMvcConfigurer {
         stringHttpMessageConverter.setDefaultCharset(StandardCharsets.UTF_8);
 
         converters.add(customJackson2HttpMessageConverter());
-    }
-
-    /**
-     * 拦截springboot-ui的文档请求
-     * @param registry
-     */
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("doc.html").addResourceLocations("classpath:/META-INF/resources/");
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
     /**

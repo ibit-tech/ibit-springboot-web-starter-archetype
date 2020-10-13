@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * 登陆参数
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 @NoArgsConstructor

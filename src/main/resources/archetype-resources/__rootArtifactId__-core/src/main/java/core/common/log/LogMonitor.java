@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * 日志监控
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Aspect
 @Component

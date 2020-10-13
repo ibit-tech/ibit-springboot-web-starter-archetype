@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 环境配置
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 @Builder

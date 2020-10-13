@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 /**
  * 启动类
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @SpringBootApplication(scanBasePackages = {
         "${package}"

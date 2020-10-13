@@ -11,7 +11,7 @@ import ${package}.db.mapper.UserMapper;
 /**
  * 用户service实现
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Service
 public class UserServiceImpl implements UserService {

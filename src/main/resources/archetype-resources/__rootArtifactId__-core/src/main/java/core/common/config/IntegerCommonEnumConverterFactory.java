@@ -11,7 +11,7 @@ import java.util.WeakHashMap;
 /**
  * CommonEnum转化类
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  **/
 public class IntegerCommonEnumConverterFactory implements ConverterFactory<Integer, CommonEnum> {
 

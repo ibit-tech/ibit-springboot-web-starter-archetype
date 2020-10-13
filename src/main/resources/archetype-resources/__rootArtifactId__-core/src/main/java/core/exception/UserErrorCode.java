@@ -3,7 +3,7 @@ package ${package}.core.exception;
 /**
  * 用户错误码
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface UserErrorCode extends ErrorCode {
 

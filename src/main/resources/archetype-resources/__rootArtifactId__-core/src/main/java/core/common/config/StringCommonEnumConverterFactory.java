@@ -13,7 +13,7 @@ import java.util.WeakHashMap;
 /**
  * CommonEnum转化类
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  **/
 @Component
 public class StringCommonEnumConverterFactory implements ConverterFactory<String, CommonEnum> {

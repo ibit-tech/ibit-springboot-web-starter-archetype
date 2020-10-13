@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 用户登陆service
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface UserLoginService {
 

@@ -5,7 +5,7 @@ import ${package}.core.module.enterprise.dto.EnterpriseDto;
 /**
  * 企业相关service
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  *
  */
 public interface EnterpriseService {

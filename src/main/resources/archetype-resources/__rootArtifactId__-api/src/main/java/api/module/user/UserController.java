@@ -23,7 +23,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 /**
  * 用户Controller
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @RestController
 @RequestMapping("{version}/api/user")

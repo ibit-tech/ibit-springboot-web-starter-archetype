@@ -3,7 +3,7 @@ package ${package}.core.exception;
 /**
  * 定义错误码（分割符、类型前缀）
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  *
  */
 public interface ErrorCode extends tech.ibit.web.springboot.exception.ErrorCode {

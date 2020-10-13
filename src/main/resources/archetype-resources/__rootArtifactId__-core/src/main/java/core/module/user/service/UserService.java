@@ -5,7 +5,7 @@ import ${package}.db.entity.User;
 /**
  * 用户service
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  *
  */
 public interface UserService {

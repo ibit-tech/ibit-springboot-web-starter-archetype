@@ -3,7 +3,7 @@ package ${package}.core.module.session.constant;
 /**
  * 定义Session Key
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  *
  */
 public interface SessionKey {

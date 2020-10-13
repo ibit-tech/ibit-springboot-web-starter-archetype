@@ -11,7 +11,7 @@ import ${package}.db.entity.type.UserGender;
 /**
  * 用户登陆dto
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 public class UserLoginDto {

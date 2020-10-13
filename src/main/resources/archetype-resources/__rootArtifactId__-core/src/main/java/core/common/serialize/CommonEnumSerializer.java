@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * 枚举类序列化
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  **/
 public class CommonEnumSerializer extends StdSerializer<CommonEnum> {
 

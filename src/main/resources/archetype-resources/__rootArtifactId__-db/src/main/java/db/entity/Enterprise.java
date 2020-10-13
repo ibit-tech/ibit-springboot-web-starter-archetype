@@ -10,7 +10,7 @@ import java.util.Date;
 /**
  * Entity for enterprise
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 @DbTable(name = "enterprise", alias = "e")
@@ -31,7 +31,7 @@ public class Enterprise {
     private String name;
 
     /**
-     * 创建时间/Users/mabinhua/code/github/ibit-tech/deha/log-config/Users/mabinhua/code/github/ibit-tech/deha/log-configsdfsdfdsf
+     * 创建时间
      * DATETIME(19)
      */
     @DbColumn(name = "gmt_create", nullable = true)

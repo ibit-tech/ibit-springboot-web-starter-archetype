@@ -15,7 +15,7 @@ import java.util.function.Function;
 /**
  * 公共配置
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Configuration
 public class CommonConfig {
@@ -46,7 +46,7 @@ public class CommonConfig {
         // 增加公共字段
         StructLog4J.setGlobalConfig(() -> new Object[]{"env", activeProfile, "service", appName});
         StructLog4J.setTransStackTrace(envConfig.isTransStackTrace());
-        SqlProvider.setValueFormatter(new LinkedHashMap<Class, Function<Object, Object>>() {{
+        SqlProvider.setValueFormatter(new LinkedHashMap<Class<?>, Function<Object, Object>>() {{
             put(tech.ibit.mybatis.CommonEnum.class, o -> ((tech.ibit.mybatis.CommonEnum) o).getValue());
         }});
     }

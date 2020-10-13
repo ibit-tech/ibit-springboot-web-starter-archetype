@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * Session Service
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface SessionService {
 

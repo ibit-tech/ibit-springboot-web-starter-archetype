@@ -18,7 +18,7 @@ import java.util.UUID;
 /**
  * 登陆拦截器
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Slf4j
 public class LoginInterceptor extends HandlerInterceptorAdapter {

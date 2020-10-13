@@ -3,7 +3,7 @@ package ${package}.core.exception;
 /**
  * Session相关错误码
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public interface SessionErrorCode extends ErrorCode {
 

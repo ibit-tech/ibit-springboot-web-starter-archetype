@@ -11,7 +11,7 @@ import ${package}.db.mapper.EnterpriseMapper;
 /**
  * 企业service实现
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Service
 public class EnterpriseServiceImpl implements EnterpriseService {

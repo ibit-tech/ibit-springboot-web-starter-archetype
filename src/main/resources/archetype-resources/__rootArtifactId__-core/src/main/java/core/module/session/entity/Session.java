@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 定义session
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public class Session implements tech.ibit.web.springboot.session.Session {
 

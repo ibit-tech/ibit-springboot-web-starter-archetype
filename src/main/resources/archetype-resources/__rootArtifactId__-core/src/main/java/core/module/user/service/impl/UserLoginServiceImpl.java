@@ -24,7 +24,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * 用户登陆实现
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Service
 @Slf4j

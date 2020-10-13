@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 /**
  * 企业DTO
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Data
 @NoArgsConstructor

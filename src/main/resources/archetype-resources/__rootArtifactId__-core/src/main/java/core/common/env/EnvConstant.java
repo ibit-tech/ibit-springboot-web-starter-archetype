@@ -3,7 +3,7 @@ package ${package}.core.common.env;
 /**
  * 环境常量
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 public class EnvConstant {
 

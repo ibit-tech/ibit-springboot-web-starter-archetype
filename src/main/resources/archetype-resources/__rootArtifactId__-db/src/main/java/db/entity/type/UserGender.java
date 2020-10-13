@@ -8,7 +8,7 @@ import tech.ibit.mybatis.CommonEnum;
 /**
  * 性别
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  *
  */
 @AllArgsConstructor

@@ -10,7 +10,7 @@ import org.springframework.session.data.redis.config.ConfigureRedisAction;
 /**
  * Http设置
  *
- * @author IBIT TECH
+ * @author IBIT程序猿
  */
 @Configuration
 public class HttpSessionConfig implements BeanClassLoaderAware {
